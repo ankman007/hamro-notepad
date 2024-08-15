@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Hamro नोटप्याड{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Welcome to Hamro नोटप्याड</h1>
+
+    <div class="card shadow-lg" style="background-color: #129490;">
+        <div class="card-body">
+            <h5 class="card-title">Create a New Note</h5>
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="noteTitle" class="form-label">Note Title</label>
+                    <input type="text" class="form-control" id="noteTitle" name="title" placeholder="Enter your note title">
+                </div>
+                <div class="mb-3">
+                    <label for="noteContent" class="form-label">Note Content</label>
+                    <textarea class="form-control" id="noteContent" name="content" rows="5" placeholder="Write your note here..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="background-color: #065143; color: white;">Save Note</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
