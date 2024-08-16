@@ -1,6 +1,17 @@
-{% extends "base.html" %}
-
-{% block title %}Hamro नोटप्याड{% endblock %}
-{% block content %}
-<h1>This is home page..</h1>
+{% extends 'base.html' %} {% block title %}Home: Hamro नोटप्याड{% endblock %} {%
+block content %}
+<div
+  class="d-flex flex-column align-items-center justify-content-center vh-100 text-center pb-5"
+>
+  <h1 class="display-4 fw-bold text-dark">Welcome to Hamro नोटप्याड</h1>
+  <p class="text-secondary fs-5 fw-light">
+    Organize your thoughts and ideas with ease.
+  </p>
+  <div class="d-flex gap-3 mt-3">
+    <a class="btn btn-primary" href="{{ url_for('views.view_notes') }}">
+      View All Notes
+    </a>
+    <a class="btn btn-outline-secondary" href="{{ url_for('views.add_notes') }}"> Add Note </a>
+  </div>
+</div>
 {% endblock %}

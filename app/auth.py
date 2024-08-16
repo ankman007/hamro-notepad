@@ -1,10 +1,12 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, logout_user, current_user
+from datetime import datetime
 from .models import User
 from . import db
 
 auth = Blueprint('auth', __name__)
+today = datetime.now()
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
@@ -27,7 +29,7 @@ def login():
             else:
                 flash('User does not exit.', category='danger')
                     
-    return render_template('login.html', title='Login', user=current_user)
+    return render_template('login.html', title='Login', user=current_user, date=today)
 
 @auth.route('/logout')
 @login_required
@@ -70,4 +72,4 @@ def sign_up():
             flash("Your account has been created successfully! Please log in.", category='success')
             return redirect(url_for('auth.login'))
 
-    return render_template('sign-up.html', title='Sign Up', user=current_user)
+    return render_template('sign-up.html', title='Sign Up', user=current_user, date=today)
