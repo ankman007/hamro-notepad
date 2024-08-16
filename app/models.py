@@ -4,7 +4,8 @@ from sqlalchemy.sql import func
 
 class Note(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    text = db.Column(db.String(30000))
+    title = db.Column(db.String(500))
+    content = db.Column(db.Text)
     date = db.Column(db.DateTime(timezone=True), default=func.now)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
