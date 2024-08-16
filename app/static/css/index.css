@@ -1,0 +1,74 @@
+.navbar {
+  background-color: #065143;
+}
+.navbar-brand {
+  color: #d8f3dc;
+  font-weight: bolder;
+  font-size: 1.85rem;
+}
+.navbar-nav .nav-link {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #00ffc5;
+}
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #129490;
+  border-radius: 20px;
+}
+.btn-primary {
+  background-color: #065143;
+  border: none;
+  border-radius: 10px;
+}
+.btn-primary:hover {
+  background-color: #129490;
+}
+.btn-secondary {
+  background-color: #129490;
+  border: none;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+.btn-secondary:hover {
+  background-color: #3a5a40;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath stroke="currentColor" stroke-width="2" d="M5 7h20M5 15h20M5 23h20" /%3E%3C/svg%3E');
+}
+.form-label {
+  font-size: 0.875rem;
+}
+
+.form-control {
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background-color: #065143;
+  border-color: #065143;
+}
+
+.btn-primary:hover {
+  background-color: #129490;
+  border-color: #129490;
+}
+
+.divider {
+  border-left: 4px solid white;
+  height: 26px;
+  margin: 4px;
+  margin-top: 6px;
+  margin-right: 6px;
+  border-radius: 5px;
+}
+
+.text-content{
+  color: white;
+}

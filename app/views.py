@@ -9,8 +9,8 @@ views = Blueprint('views', __name__)
 def home():
     return render_template('home.html', title='Notes App', user=current_user)
 
-@views.route('/')
+@views.route('/add-notes')
 @login_required
-def notes():
-    return render_template('home.html', title='Notes App', user=current_user)
+def add_notes():
+    return render_template('add_notes.html', title='Add Notes', user=current_user)
 
