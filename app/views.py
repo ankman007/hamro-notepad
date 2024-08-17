@@ -56,7 +56,30 @@ def delete_note():
 @views.route('/search-note', methods=['GET'])
 @login_required
 def search_note():
-    search_term = request.args.get('search_term', '')  # Use request.args for GET parameters
+    search_term = request.args.get('search_term', '')  
     notes = Note.query.filter(Note.title.contains(search_term), Note.user_id == current_user.id).all()
     today = datetime.now()
     return render_template('view_notes.html', title='Search Note', user=current_user, notes=notes, search_term=search_term, date=today)
+
+@views.route('/edit-note/<int:note_id>', methods=['GET', 'PUT'])
+@login_required
+def edit_note(note_id):
+    note = Note.query.get(note_id)
+    today = datetime.now()
+    
+    if not note:
+        return jsonify({'error': 'Note not found'}), 404
+
+    if request.method == 'GET':
+        return render_template('edit_note.html', note=note, user=current_user, date=today)
+        
+    elif request.method == 'PUT':
+        try: 
+            data = request.json  
+            note.title = data['title']  
+            note.content = data['content']
+            db.session.commit()
+            flash("Note has been edited successfully.", category='success')
+            return jsonify({'msg': 'Note has been edited successfully.'}), 200
+        except Exception as e:
+            return jsonify({ 'error': str(e) }), 500
