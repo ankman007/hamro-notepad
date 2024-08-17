@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .navbar {
   background-color: #065143;
 }
@@ -81,4 +86,59 @@
 
 .card:focus-within {
   outline: none; 
+}
+
+.boxed-1{
+  padding-bottom: 300px;
+}
+
+.boxed-2{
+  padding-bottom: 370px;
+  padding-top: 50px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  padding: 0;
+  border-spacing: 0;
+}
+
+.btn-group .btn {
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-group .btn i {
+  transition: color 0.3s;
+}
+
+.btn-group .btn:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
+}
+
+.btn-group .btn-outline-primary:hover i {
+  color: #0d6efd; /* Primary color on hover */
+}
+
+.btn-group .btn-outline-secondary:hover i {
+  color: #6c757d; /* Secondary color on hover */
+}
+
+.btn-group .btn-outline-danger:hover i {
+  color: #dc3545; /* Danger color on hover */
+}
+
+.btn-group .btn a {
+  color: inherit; /* Ensure the link inherits button color */
+  text-decoration: none; /* Remove underline from link */
 }

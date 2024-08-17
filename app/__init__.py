@@ -6,7 +6,6 @@ from flask_login import LoginManager
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
-
 def create_app():
     app = Flask(__name__)
     # app.config['SECRET_KEY'] = 'hello'
@@ -39,4 +38,3 @@ def create_database(app):
         with app.app_context():
             db.create_all()
         print("Database created successfully.")
-
