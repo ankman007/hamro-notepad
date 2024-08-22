@@ -3,7 +3,7 @@
 Hamro नोटप्याड is a simple note-taking application built using Flask, a lightweight Python web framework. This application uses various Python packages and libraries, including Flask’s built-in ORM, SQLAlchemy, for database management. The user interfaces are designed with Bootstrap classes.
 
 
-[Project Link](https://hamro-notepad-1.onrender.com/)
+[Project Link](https://hamro-notepad.onrender.com/)
 
 ## Technology used
 

@@ -74,11 +74,12 @@ endblock %} {% block content %}
               href="{{ url_for('views.edit_note', note_id=note.id) }}"
               class="text-decoration-none text-primary"
             >
-              <i class="bi bi-pencil text-secondary"></i>
+              <i class="bi bi-pencil text-secondary text-success"></i>
             </a>
           </button>
           <button
             class="btn btn-outline-secondary btn-sm rounded-pill border-0 me-2 fw-bolder d-flex align-items-center"
+            aria-label="View Note Content"
           >
             <a
               data-bs-toggle="collapse"
@@ -87,7 +88,7 @@ endblock %} {% block content %}
               aria-expanded="false"
               aria-controls="noteContent{{ note.id }}"
             >
-              <i class="bi bi-eye"></i>
+              <i class="bi bi-eye text-info"></i>
             </a>
           </button>
           <button

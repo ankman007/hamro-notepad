@@ -1,11 +1,20 @@
-{% extends "base.html" %} {% block title %}Login: Hamro नोटप्याड{% endblock %}
+{% extends "base.html" %}
+{% block title %}Login: Hamro नोटप्याड{% endblock %}
 {% block content %}
-<div class="container mt-5">
+<div class="container mt-3">
   <h1 class="text-center mb-4">Login</h1>
   <div class="row justify-content-center">
     <div class="col-lg-6 col-md-8 col-sm-10">
       <div class="card shadow-sm">
         <div class="card-body p-4">
+
+          <!-- Test Credentials Section -->
+          <div class="text-center p-3 mb-2" style="background-color: #f8f9fa; border-radius: 5px; border: 1px solid #ddd;">
+            <p class="mb-0"><strong>Login with Demo Credentials:</strong></p>
+            <p class="mb-0">Email: <code>test@gmail.com</code></p>
+            <p class="mb-0">Password: <code>admin123</code></p>
+          </div>
+
           <form method="post">
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
